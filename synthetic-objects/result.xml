@@ -1,0 +1,15 @@
+<annotation>
+	<folder></folder>
+	<filename>result.png</filename>
+	<path>result.png</path>
+	<source>
+		<database>aai</database>
+	</source>
+	<size>
+		<width>1278</width>
+		<height>720</height>
+		<depth/>
+	</size>
+	<segmented>0</segmented>
+	
+</annotation>
