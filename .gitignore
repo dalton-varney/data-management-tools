@@ -1,0 +1,13 @@
+models/
+venv/
+alwaysai.target.json
+alwaysai.project.json
+*.zip
+*.jpg
+*.jpeg
+*.png
+*.PNG
+*.JPEG
+*.JPG
+*/Annotations
+*/JPEGImages
