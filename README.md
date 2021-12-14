@@ -1,5 +1,5 @@
 # Dataset Tools
-This repository holds a collection of scripts to assist in dataset generation and alteration.
+This repository holds a collection of scripts to assist in dataset generation and alteration. A companion tutorial can be found here: https://alwaysai.co/prism/tutorials 
 
 Currently there are scripts for augmenting images, overlaying annotations on images, balancing datasets, generating synthetic datasets, and converting labels.
 
