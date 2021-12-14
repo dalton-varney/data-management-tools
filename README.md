@@ -34,9 +34,22 @@ This application, available with `class_balancer.py`, will calculate the minimum
 ```aai app start -- --input_dir <path/to/dir> --output_dir <path/to/dir> --sample <int>```
 
 ## Synthetic Objects
-This project generates synthetic data. It is expected that you have the `results.xml` file as well as a folder with named `Classes` that contains one or more sub-folders, which then contain `.png` files. You also need to have a folder of `Annotations`, which is an empty directory, as well as a `backgrounds` folder, which contains images. These can be either `.jpg` or `.png`, but be aware that `.png` files will result in a very large directory. You run this application as an alwaysAI project. 
+This project generates synthetic data. It is expected that you have the `results.xml` file as well as a folder with named `Classes` that contains one or more sub-folders, which then contain `.png` files. files You also need to have a folder of `Annotations`, as well as a folder of `JPEGImages`, which are both empty directories. The `Annotations` and `JPEGImages` empty directories will be created if they do not exist. You will need to create a `backgrounds` folder, which should contain images. These can be either `.jpg` or `.png`, but be aware that `.png` files will result in a very large directory. You run this application as an alwaysAI project. 
 
-Change into the `synthetic-objects` folder, and run the `aai app configure`, `aai app install` and then `aai app start` to run the project.
+The folder structure should look as follows:
+```
+    data-management-tools
+        synthetic-objects
+            synth.py
+            Annotations
+            JPEGImages
+            Classes
+                <some-folder>
+                    *.png
+            results.xml
+```         
+
+Change into the `synthetic-objects` folder, and run the `aai app configure`. An `app.py` file will be created, press `yes`. Modify the `alwaysai.app.json` file to run `class_balancer.py`. Then run `aai app install` and then `aai app start` to run the project.
 
 ## Label Converter
 This script can be used to rename certain labels in your dataset. This script requires the use of `label_mappings.csv` -- you can specify the bad labels in the first column, and the corresponding label to replace the bad label with in the second column. There is no header row expected. The expected format is:
