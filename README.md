@@ -53,4 +53,4 @@ In this example, both `colored_plastic_bottle` and `clear_plastic_bottle` will b
 
 You can change `alwaysai.app.json` to run `label_converter.py`, specifying the input directory with the `--input_dir` flag. You can specify an output directory with the `--output_dir` flag, otherwise a default filename will be chosen for you and a new zip file will be created. Run the label converter with
 
-```aai app run -- --input_dir <path/to/dir>```
+```aai app start -- --input_dir <path/to/dir>```
