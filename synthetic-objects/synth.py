@@ -1,7 +1,5 @@
 import glob
-import imgaug as ia
-import imgaug.augmenters as iaa
-from imgaug.augmentables.bbs import BoundingBox, BoundingBoxesOnImage
+from imgaug.augmentables.bbs import BoundingBox
 import random
 import os
 import copy as cp
@@ -28,18 +26,19 @@ while i < numImages:
             if os.path.isfile(os.path.join(path, x))]
     )
 
-    img_bg = Image.open("./backgrounds/" + random_filename)
+    img_bg = Image.open(
+        "." + os.sep + "backgrounds" + os.sep + random_filename)
     width, height = img_bg.size
 
     # Randomly determine number of objects to put on image
-    a = random.randint(1,5)
+    a = random.randint(1, 5)
 
     # Randomly sample examples of all class examples
     sample_list = random.choices(images, k=a)
     ai = 0
     bbs = []
     for img in sample_list:
-        class_name = img.split('/')[2]
+        class_name = img.split(os.sep)[2]
 
         img = Image.open(img).convert("RGBA")
         x, y = img.size
