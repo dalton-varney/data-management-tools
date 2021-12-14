@@ -90,5 +90,5 @@ while i < numImages:
     new_annotation_file.write(
         "Annotations", os.sep, "result" + str(i) + ".xml")
 
-    img_bg.save('JPEGImages", os.sep, "result' + str(i) + '.jpg')
+    img_bg.save("JPEGImages" + os.sep + "result" + str(i) + '.jpg')
     i += 1
