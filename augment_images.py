@@ -391,28 +391,29 @@ if __name__ == "__main__":
         parser.add_argument(
                 '--input_dir', type=str,
                 help='The directory to augment; a zip file of an Annotation folder, in Pascal VOC, and a JPEGImages folder.')
-        parser.add_argument('--all', action='store_false')
-        parser.add_argument('--rotate_180', action='store_false')
-        parser.add_argument('--darken', action='store_false'),
-        parser.add_argument('--rotate_90_darken', action='store_false'),
-        parser.add_argument('--rotate_180_darken', action='store_false')
-        parser.add_argument('--brighten', action='store_false')
-        parser.add_argument('--rotate_brighten', action='store_false')
-        parser.add_argument('--blur', action='store_false')
-        parser.add_argument('--rotate_180_blur', action='store_false')
-        parser.add_argument('--rotate_270_darken', action='store_false')
-        parser.add_argument('--grayscale', action='store_false')
-        parser.add_argument('--rotate_90_grayscale', action='store_false')
+        parser.add_argument('--all', action='store_true')
+        parser.add_argument('--rotate_180', action='store_true')
+        parser.add_argument('--darken', action='store_true'),
+        parser.add_argument('--rotate_90_darken', action='store_true'),
+        parser.add_argument('--rotate_180_darken', action='store_true')
+        parser.add_argument('--brighten', action='store_true')
+        parser.add_argument('--rotate_brighten', action='store_true')
+        parser.add_argument('--blur', action='store_true')
+        parser.add_argument('--rotate_180_blur', action='store_true')
+        parser.add_argument('--rotate_270_darken', action='store_true')
+        parser.add_argument('--grayscale', action='store_true')
+        parser.add_argument('--rotate_90_grayscale', action='store_true')
         parser.add_argument(
-            '--rotate_180_grayscale', action='store_false')
-        parser.add_argument('--grayscale_darken', action='store_false')
-        parser.add_argument('--grayscale_brighten', action='store_false')
-        parser.add_argument('--grayscale_blur', action='store_false')
+            '--rotate_180_grayscale', action='store_true')
+        parser.add_argument('--grayscale_darken', action='store_true')
+        parser.add_argument('--grayscale_brighten', action='store_true')
+        parser.add_argument('--grayscale_blur', action='store_true')
         parser.add_argument(
-            '--rotate_270_grayscale', action='store_false')
-        parser.add_argument('--zoom', action='store_false')
+            '--rotate_270_grayscale', action='store_true')
+        parser.add_argument('--zoom', action='store_true')
 
         args = parser.parse_args()
+        print(args)
 
         augmenter = Augmenter(args.input_dir)
         augmenter.augment_images(
