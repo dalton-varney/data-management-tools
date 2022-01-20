@@ -40,7 +40,7 @@ The folder structure should look as follows:
             results.xml
 ```         
 
-Change into the `synthetic-objects` folder, and run the `aai app configure`. An `app.py` file will be created, press `yes`. Modify the `alwaysai.app.json` file to run `class_balancer.py`. Then run `aai app install` and then `aai app start` to run the project.
+Change into the `synthetic-objects` folder, and run the `aai app configure`. An `app.py` file will be created, press `yes`. Modify the `alwaysai.app.json` file to run `synth.py`. Then run `aai app install` and then `aai app start` to run the project.
 
 ## Label Converter
 This script can be used to rename certain labels in your dataset. This script requires the use of `label_mappings.csv` -- you can specify the bad labels in the first column, and the corresponding label to replace the bad label with in the second column. There is no header row expected. The expected format is:
