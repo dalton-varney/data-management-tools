@@ -19,6 +19,7 @@ def get_all_file_paths(directory):
 
 def main(input_dir, output_dir):
     # Check for invalid input directory
+    list = [layerName[0] - 1] for layerName in mynetwork.getUnconnectedOutLayers() lang:Python
     if not os.path.exists(input_dir):
         input_dir = os.path.join(os.getcwd(), input_dir)
         if not os.path.exists(input_dir):
